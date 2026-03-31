@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nervion - Advanced Nerve Health Support Supplement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #003d5c 0%, #0d7a96 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #76d7f0;
+        }
+
+        .order-btn {
+            background: #ff6b35;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .order-btn:hover {
+            background: #e55a2b;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8f0f7 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-image {
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            max-height: 600px;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            color: #003d5c;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #ff6b35;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #003d5c;
+            border: 2px solid #003d5c;
+        }
+
+        .btn-secondary:hover {
+            background: #003d5c;
+            color: white;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #003d5c;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: #ff6b35;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            border-color: #ff6b35;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: #003d5c;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: #f5f7fa;
+            padding: 4rem 2rem;
+        }
+
+        .how-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            background: #ff6b35;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .step h4 {
+            color: #003d5c;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Packages Section */
+        .packages {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .package-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .package-card:hover {
+            border-color: #ff6b35;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transform: translateY(-10px);
+        }
+
+        .package-header {
+            background: linear-gradient(135deg, #003d5c 0%, #0d7a96 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .package-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .package-image {
+            text-align: center;
+            padding: 2rem;
+            background: #f9f9f9;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .package-image img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: contain;
+        }
+
+        .package-details {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .package-details ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .package-details li {
+            padding: 0.5rem 0;
+            color: #666;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .package-details li:last-child {
+            border-bottom: none;
+        }
+
+        .package-details li::before {
+            content: '✓ ';
+            color: #ff6b35;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            color: #ff6b35;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .package-btn {
+            background: #ff6b35;
+            color: white;
+            padding: 0.9rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: auto;
+            font-weight: bold;
+        }
+
+        .package-btn:hover {
+            background: #e55a2b;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: linear-gradient(135deg, #003d5c 0%, #0d7a96 100%);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .benefits-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .benefits-list {
+            list-style: none;
+        }
+
+        .benefits-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .benefits-list li::before {
+            content: '★';
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-size: 1.2rem;
+        }
+
+        .benefits-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .about-text h3 {
+            color: #003d5c;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .ingredients-badge {
+            background: #f0f0f0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        .ingredients-badge h4 {
+            color: #003d5c;
+            margin-bottom: 0.5rem;
+        }
+
+        .ingredients-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .ingredient-tag {
+            background: #003d5c;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #f5f7fa;
+            padding: 4rem 2rem;
+        }
+
+        .contact-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #ff6b35;
+            min-width: 30px;
+        }
+
+        .contact-item h4 {
+            color: #003d5c;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 0.9rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #ff6b35;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form button {
+            background: #ff6b35;
+            color: white;
+            padding: 0.9rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #e55a2b;
+        }
+
+        /* Footer */
+        footer {
+            background: #003d5c;
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #76d7f0;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #76d7f0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .benefits-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f5f7fa;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .stars {
+            color: #ff6b35;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-text {
+            color: #666;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #003d5c;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <span style="color: #76d7f0;">⚡</span> NERVION
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://nervion.ca/" target="_blank" class="order-btn">Order Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Real Product Image -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Advanced Nerve Health Support</h1>
+                <p>Discover the power of Nervion - a scientifically formulated dietary supplement designed to support your nervous system, reduce discomfort, and promote overall nerve wellness.</p>
+                <div class="cta-buttons">
+                    <a href="https://nervion.ca/" target="_blank" class="btn btn-primary">🛒 Shop Now on Official Store</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- REAL PRODUCT IMAGE -->
+                <img src="https://nervion.one/images/hero-section-image.webp" alt="Nervion 60 Capsules Dietary Supplement" style="max-width: 350px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3>Advanced Formula</h3>
+                <p>Scientifically formulated blend of B-vitamins, Alpha Lipoic Acid, and botanical extracts for optimal nerve support.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌿</div>
+                <h3>100% Natural</h3>
+                <p>Non-GMO, gluten-free, and free from artificial additives. Pure ingredients you can trust.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3>Quality Assured</h3>
+                <p>FDA-registered and GMP-certified facilities ensure the highest quality and safety standards.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💪</div>
+                <h3>Fast Acting</h3>
+                <p>Formulated for quick absorption and noticeable results in supporting nerve comfort and function.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Safe & Effective</h3>
+                <p>Non-habit-forming and suitable for long-term daily use with proven track record.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3>Money-Back Guarantee</h3>
+                <p>60-day satisfaction guarantee. If you're not completely satisfied, we'll refund your money.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="how-content">
+            <h2 class="section-title">How Nervion Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Cellular Nourishment</h4>
+                    <p>Essential vitamins and antioxidants penetrate and nourish nerve cells at the cellular level.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Antioxidant Protection</h4>
+                    <p>Alpha Lipoic Acid shields nerves from oxidative stress and metabolic damage.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Nerve Regeneration</h4>
+                    <p>B vitamins support myelin sheath health and nerve tissue regeneration.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Symptom Relief</h4>
+                    <p>Experience reduction in tingling, numbness, and burning sensations within weeks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages">
+        <h2 class="section-title">Choose Your Package</h2>
+        <div class="packages-grid">
+            <!-- Single Pack (1 Bottle) -->
+            <div class="package-card">
+                <div class="package-header">
+                    <h3>Single Pack</h3>
+                    <p>30-Day Supply</p>
+                </div>
+                <div class="package-image">
+                    <img src="https://nervion.one/images/hero-section-image.webp" alt="Single Pack - 1 Bottle Nervion">
+                </div>
+                <div class="package-details">
+                    <ul>
+                        <li>1 Bottle (60 Capsules)</li>
+                        <li>30-Day Supply</li>
+                        <li>Full Potency Formula</li>
+                        <li>Standard Shipping</li>
+                    </ul>
+                    <div class="price">$49.99</div>
+                    <a href="https://nervion.ca/" target="_blank" class="package-btn">Order Single Pack</a>
+                </div>
+            </div>
+
+            <!-- Combo Pack (3 Bottles) -->
+            <div class="package-card">
+                <div class="package-header">
+                    <h3>Combo Pack (3)</h3>
+                    <p style="color: #76d7f0;">⭐ Most Popular</p>
+                </div>
+                <div class="package-image">
+                    <img src="https://nervieon.com/nervion/nervion.webp" alt="Combo Pack - 3 Bottles Nervion">
+                </div>
+                <div class="package-details">
+                    <ul>
+                        <li>3 Bottles (180 Capsules)</li>
+                        <li>90-Day Supply</li>
+                        <li>30% Savings Per Bottle</li>
+                        <li>Free Standard Shipping</li>
+                    </ul>
+                    <div class="price">$104.97 <span style="font-size: 0.8rem; color: #ccc; font-weight: normal;">($34.99/bottle)</span></div>
+                    <a href="https://nervion.ca/" target="_blank" class="package-btn">Order Combo Pack</a>
+                </div>
+            </div>
+
+            <!-- Ultimate Pack (6 Bottles) -->
+            <div class="package-card">
+                <div class="package-header">
+                    <h3>Ultimate Pack (6)</h3>
+                    <p style="color: #ff6b35;">💎 Best Value</p>
+                </div>
+                <div class="package-image">
+                    <img src="https://us-en-us-nervion.com/assets/images/nervion-6bottle-buy.png" alt="Ultimate Pack - 6 Bottles Nervion">
+                </div>
+                <div class="package-details">
+                    <ul>
+                        <li>6 Bottles (360 Capsules)</li>
+                        <li>180-Day Supply</li>
+                        <li>50% Savings Per Bottle</li>
+                        <li>FREE Express Shipping</li>
+                    </ul>
+                    <div class="price">$149.94 <span style="font-size: 0.8rem; color: #ccc; font-weight: normal;">($24.99/bottle)</span></div>
+                    <a href="https://nervion.ca/" target="_blank" class="package-btn">Order Ultimate Pack</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="benefits-content">
+            <div>
+                <h2>Why Choose Nervion?</h2>
+                <ul class="benefits-list">
+                    <li>Clinically-Studied Ingredients</li>
+                    <li>Reduces Tingling & Numbness</li>
+                    <li>Improves Nerve Comfort</li>
+                    <li>Boosts Energy Levels</li>
+                    <li>Enhanced Blood Circulation</li>
+                    <li>Supports Brain Function</li>
+                    <li>Non-Habit Forming</li>
+                    <li>No Artificial Additives</li>
+                    <li>60-Day Money-Back Guarantee</li>
+                    <li>Fast & Free Shipping Available</li>
+                </ul>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" style="max-width: 250px;">
+                    <circle cx="200" cy="200" r="180" fill="#0d7a96" opacity="0.2"/>
+                    <path d="M200 80 Q280 140 280 220 Q280 300 200 320 Q120 300 120 220 Q120 140 200 80" fill="none" stroke="#76d7f0" stroke-width="3"/>
+                    <circle cx="200" cy="200" r="60" fill="#76d7f0"/>
+                    <text x="200" y="220" font-size="40" font-weight="bold" text-anchor="middle" fill="white">✓</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Nervion</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>What is Nervion?</h3>
+                <p>Nervion is an advanced dietary supplement specifically formulated to support nerve health and promote optimal nervous system function. Developed by health professionals and backed by scientific research, Nervion combines powerful natural ingredients with essential vitamins to address nerve-related concerns.</p>
+                
+                <h3 style="margin-top: 1.5rem;">Our Mission</h3>
+                <p>We believe everyone deserves to live a life free from nerve discomfort and pain. Nervion is committed to providing a natural, effective, and affordable solution for nerve health support without harmful side effects.</p>
+
+                <h3 style="margin-top: 1.5rem;">Quality & Safety</h3>
+                <p>All Nervion products are manufactured in FDA-registered, GMP-certified facilities in the USA. We follow strict quality control standards and use only the highest-quality, pure ingredients. Our commitment to excellence ensures you're getting a product you can trust.</p>
+
+                <div class="ingredients-badge">
+                    <h4>🔬 Key Ingredients Include:</h4>
+                    <div class="ingredients-list">
+                        <span class="ingredient-tag">Alpha Lipoic Acid</span>
+                        <span class="ingredient-tag">Vitamin B1</span>
+                        <span class="ingredient-tag">Vitamin B6</span>
+                        <span class="ingredient-tag">Vitamin B12</span>
+                        <span class="ingredient-tag">Magnesium</span>
+                        <span class="ingredient-tag">Folic Acid</span>
+                        <span class="ingredient-tag">Acetyl-L-Carnitine</span>
+                        <span class="ingredient-tag">Turmeric Extract</span>
+                        <span class="ingredient-tag">Passionflower</span>
+                        <span class="ingredient-tag">NAC</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" style="max-width: 100%;">
+                    <rect fill="#e8f0f7" width="300" height="400" rx="20"/>
+                    <rect x="50" y="30" width="200" height="320" rx="15" fill="white" stroke="#003d5c" stroke-width="2"/>
+                    <circle cx="150" cy="100" r="50" fill="#0d7a96"/>
+                    <text x="150" y="115" font-size="30" font-weight="bold" text-anchor="middle" fill="white">⚡</text>
+                    <text x="150" y="180" font-size="28" font-weight="bold" text-anchor="middle" fill="#003d5c">NERVION</text>
+                    <text x="150" y="220" font-size="18" text-anchor="middle" fill="#666">Nerve Health</text>
+                    <text x="150" y="245" font-size="18" text-anchor="middle" fill="#666">Support System</text>
+                    <rect x="70" y="270" width="160" height="50" rx="10" fill="#e8f0f7" stroke="#0d7a96" stroke-width="2"/>
+                    <text x="150" y="295" font-size="14" text-anchor="middle" fill="#003d5c">60 Natural Capsules</text>
+                    <text x="150" y="315" font-size="12" text-anchor="middle" fill="#666">USDA Quality Standard</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"After just 3 weeks of taking Nervion, I noticed a significant reduction in the tingling sensations in my feet. This product has truly changed my quality of life!"</p>
+                <p class="testimonial-author">- Sarah M., Toronto</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I was skeptical at first, but Nervion delivered results. My energy levels are up, and the numbness in my hands has improved tremendously. Highly recommended!"</p>
+                <p class="testimonial-author">- James T., Vancouver</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The 60-day money-back guarantee gave me confidence to try Nervion. I'm so glad I did! I've been a customer for 6 months now and couldn't be happier."</p>
+                <p class="testimonial-author">- Emily R., Calgary</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>support@nervion.ca</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>1-800-NERVION (1-800-637-8466)</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4>Headquarters</h4>
+                        <p>Toronto, Ontario, Canada</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕒</div>
+                    <div>
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM EST<br>Saturday: 10:00 AM - 4:00 PM EST<br>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Nervion</h4>
+                <p>Nervion is a trusted nerve health supplement dedicated to improving quality of life through advanced, natural formulations.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://nervion.ca/" target="_blank">Official Store</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Policies & Info</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Product Info</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Ingredients</a></li>
+                    <li><a href="#">Dosage Guide</a></li>
+                    <li><a href="#">Safety Information</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nervion Canada. All rights reserved. | These statements have not been evaluated by Health Canada. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Manufactured in USA | FDA Registered | GMP Certified | Quality Assured</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact form handling
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Smooth animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .step, .package-card, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add fadeInUp animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
